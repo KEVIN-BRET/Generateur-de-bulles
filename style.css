@@ -16,7 +16,7 @@ body {
 
 @keyframes anim {
   to {
-    top: -280px;
+    top: -300px;
     opacity: 1;
     filter: hue-rotate(720deg); // changement de couleur sur la roue chromatique
     left: var(--left); // on inject une variable pour pouvoir la pointer en JS
