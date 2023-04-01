@@ -20,10 +20,15 @@ const bubbleMaker = () => {
   const plusMinus = Math.random() > 0.5 ? 1 : -1; // pour renvoyer un (--left) négatif aléatoirement
   bubble.style.setProperty("--left", Math.random() * 100 + plusMinus + "%"); // pour modifier la var CSS aleatoirement
 
+  // disparition des bulles au click
+  bubble.addEventListener("click", () => {
+    bubble.remove();
+  });
+
   //   setTimeout pour supprimer les bulles après 8s ..
   setTimeout(() => {
     bubble.remove();
   }, 8000);
 };
 
-setInterval(bubbleMaker, 2000); // appeler bubbleMaker toutes les 0.3s ...
+setInterval(bubbleMaker, 1000); // appeler bubbleMaker toutes les 0.3s ...
