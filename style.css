@@ -3,6 +3,8 @@ body {
   min-height: 100vh;
   cursor: crosshair;
 }
+
+/* .bubble va définir le style de départ de nos bubble */
 .bubble {
   position: absolute;
   border-radius: 300px;
@@ -14,12 +16,14 @@ body {
 
 @keyframes anim {
   to {
-    top: -250px;
-    left: var(--left);
+    top: -280px;
     opacity: 1;
-    filter: hue-rotate(720deg);
+    filter: hue-rotate(720deg); // changement de couleur sur la roue chromatique
+    left: var(--left); // on inject une variable pour pouvoir la pointer en JS
   }
 }
+/* attention l'ordre des propriété du @keyframe influ sur le rendu final !  */
+
 h3 {
   font-size: 10rem;
   text-align: center;
