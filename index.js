@@ -1,3 +1,6 @@
+const counterDisplay = document.querySelector("h3");
+let counter = 0;
+
 const bubbleMaker = () => {
   const bubble = document.createElement("span"); // on initialise une const bubble qui va créer une <span> dans notre le <body> de notre html
   bubble.classList.add("bubble");
@@ -22,7 +25,11 @@ const bubbleMaker = () => {
 
   // disparition des bulles au click
   bubble.addEventListener("click", () => {
+    counter++;
+    console.log(counter);
     bubble.remove();
+    // counterDisplay.innerHTML = counter; // ou :
+    counterDisplay.textContent = counter;
   });
 
   //   setTimeout pour supprimer les bulles après 8s ..
